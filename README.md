@@ -11,8 +11,8 @@ Developed by Team Cygnus in SRM MIC Rescon 1.0
 ![image](https://github.com/sd2001/EfficientNet-Rescon/blob/main/imgs/comparison.png)
 </div>
 
-Team Members:
+<strong>Team Members:</strong>
 
-- Prathamesh 
+- Prathamesh Deshpande
 - Swarnabha Das
 - Yudhajeet Bhattacharya
