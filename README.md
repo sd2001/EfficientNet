@@ -13,7 +13,7 @@ Developed by Team Cygnus in SRM MIC Rescon 1.0
 
 
 <div>  
-  <img align="right" width="200" height="200" src="https://github.com/sd2001/EfficientNet-Rescon/blob/main/imgs/bs.png">
+  <img align="right" width="150" height="150" src="https://github.com/sd2001/EfficientNet-Rescon/blob/main/imgs/bs.png">
  </div> 
 <strong>Team Members:</strong>
 
