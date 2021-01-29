@@ -16,3 +16,5 @@ Developed by Team Cygnus in SRM MIC Rescon 1.0
 - Prathamesh Deshpande
 - Swarnabha Das
 - Yudhajeet Bhattacharya
+
+Click »<a href="https://arxiv.org/pdf/1905.11946v5.pdf"><strong>here</strong></a>« for the original paper
