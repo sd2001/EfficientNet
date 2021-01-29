@@ -70,7 +70,7 @@ def __bottleneck(inputs, filters_in, filters_out, kernel_size, expansion_coef, s
     else:
         x = inputs
     
-    # Dephtwise conv phase.
+    #Dephtwise conv phase.
     x = DepthwiseConv2D(kernel_size=kernel_size,
                         strides=stride,
                         padding='same',
@@ -79,10 +79,10 @@ def __bottleneck(inputs, filters_in, filters_out, kernel_size, expansion_coef, s
     x = BatchNormalization()(x)
     x = Activation(tf.nn.swish)(x)
     
-    # Squeeze and Excitation phase.
+    #Squeeze and Excitation phase.
     x = SqueezeExcitation(x, filters_in, filters_expand, se_ratio)
     
-    # Output phase.
+    #Output phase.
     x = Conv2D(filters=filters_out,
                kernel_size=1,
                padding='same',
@@ -91,7 +91,7 @@ def __bottleneck(inputs, filters_in, filters_out, kernel_size, expansion_coef, s
     
     x = BatchNormalization()(x)
     
-    # MobileNetV2 paper: "Add skip connection when stride=1."
+    
     if (stride == 1 and filters_in == filters_out):
         if dropout_rate > 0:
             x = Dropout(dropout_rate)(x)
@@ -100,12 +100,10 @@ def __bottleneck(inputs, filters_in, filters_out, kernel_size, expansion_coef, s
     return x
 
 def MBConvBlock(inputs, filters_in, filters_out, kernel_size, expansion_coef, se_ratio, stride, repeat, dropout_rate):
-    """
-    """
+    
     x = __bottleneck(inputs, filters_in, filters_out, kernel_size, expansion_coef, se_ratio, stride, dropout_rate)
     
     
-    # MobileNetV2 paper: "The first layer of eachsequence has a stride s and all others use stride 1"
     filters_in = filters_out
     stride = 1
     
