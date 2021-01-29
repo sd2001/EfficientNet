@@ -11,10 +11,15 @@ Developed by Team Cygnus in SRM MIC Rescon 1.0
 ![image](https://github.com/sd2001/EfficientNet-Rescon/blob/main/imgs/comparison.png)
 </div>
 
+
+<div>  
+  <img align="right" width="200" height="200" src="https://github.com/sd2001/EfficientNet-Rescon/blob/main/imgs/bs.png">
+ </div> 
 <strong>Team Members:</strong>
 
 - Prathamesh Deshpande
 - Swarnabha Das
 - Yudhajeet Bhattacharya
+
 
 Click »<a href="https://arxiv.org/pdf/1905.11946v5.pdf"><strong>here</strong></a>« for the original paper
