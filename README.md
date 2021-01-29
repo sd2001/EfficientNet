@@ -17,9 +17,9 @@ Developed by Team Cygnus in SRM MIC Rescon 1.0
  </div> 
 <strong>Team Members:</strong>
 
-- Prathamesh Deshpande
-- Swarnabha Das
-- Yudhajeet Bhattacharya
+- <a href="https://github.com/PrathameshDeshpande">Prathamesh Deshpande</a>
+- <a href="https://github.com/sd2001">Swarnabha Das</a>
+- <a href="https://github.com/norserambler">Yudhajeet Bhattacharya</a>
 
 
 Click »<a href="https://arxiv.org/pdf/1905.11946v5.pdf"><strong>here</strong></a>« for the original paper
