@@ -9,10 +9,7 @@ CONV_KERNEL_INITIALIZER = {
     'config': {
         'scale': 2.0,
         'mode': 'fan_out',
-        # EfficientNet actually uses an untruncated normal distribution for
-        # initializing conv layers, but keras.initializers.VarianceScaling use
-        # a truncated distribution.
-        # We decided against a custom initializer for better serializability.
+        
         'distribution': 'normal'
     }
 }
@@ -27,15 +24,7 @@ DENSE_KERNEL_INITIALIZER = {
 }
 
 def SqueezeExcitation(x, filters_in, filters_expand, se_ratio):
-    """
-        Squeeze and Excitation phase.
-        
-        Parameters:
-        -x: Tensor, input tensor of conv layer.
-        -filters_in: Integer, dimension of the input space.
-        -filters_expand: Integer, Dimension of the output space after expansion
-        -se_ratio: Float, ratio use to squeeze the input filters.
-    """
+    
     filters_se = max(1, int(filters_in * se_ratio))
     
     # Squeeze.
@@ -64,18 +53,7 @@ def SqueezeExcitation(x, filters_in, filters_expand, se_ratio):
     return x
 
 def __bottleneck(inputs, filters_in, filters_out, kernel_size, expansion_coef, se_ratio, stride, dropout_rate):
-    """
-        Basic bottleneck structure.
-        
-        Parameters:
-        -inputs: Tensor, input tensor of conv layer.
-        -filters_in: Integer, dimension of the input space.
-        -filters_out: Integer, dimension of the output space.
-        -kernel_size: Integer or tuple of 2 integers, width and height of filters.
-        -expansion_coef: Integer, expansion coefficient.
-        -se_ratio: Float, ratio use to squeeze the input filters.
-        -stride: Integer or tuple of 2 integers, conv stride.
-    """
+   
     # Dimension of the output space after expansion.
     filters_expand = filters_in * expansion_coef
     
@@ -154,7 +132,6 @@ def ConvBlock(inputs, filters, kernel_size, stride=1, padding='same'):
     return x
 
 def efficientnet_params(model_name):
-    """ Map EfficientNet model name to parameter coefficients. """
     params_dict = {
         # Coefficients:   width,depth,res,dropout
         'efficientnet-b0': (1.0, 1.0, 224, 0.2),
@@ -170,13 +147,11 @@ def efficientnet_params(model_name):
     }
     return params_dict[model_name]
 
-# For the exact scaling technique we follow the official implementation as the paper does not tell us.
-# https://github.com/tensorflow/tpu/blob/01574500090fa9c011cb8418c61d442286720211/models/official/efficientnet/efficientnet_model.py#L101-L125
 
 def scaled_repeats(n, d_coef):
     return int(math.ceil(n * d_coef))
 
-# Snap number of channels to multiple of 8 for optimized implementations
+
 def scaled_channels(n, w_coef):
     n = n * w_coef
     m = max(8, int(n + 8 / 2) // 8 * 8)
