@@ -22,7 +22,7 @@ Click »<a href="https://docs.google.com/presentation/d/1orDLEPOTLfVI5EltMJxhI4y
   
 ![image](https://github.com/sd2001/EfficientNet-Rescon/blob/main/imgs/compound.png)  
 <hr>
-<b>How Efficient net compares to past transfer learning models.<br>
+<b>How Efficient net performs when compared to past transfer learning models.<br>
 
 ![image](https://github.com/sd2001/EfficientNet-Rescon/blob/main/imgs/comparison.png)
 </div>
