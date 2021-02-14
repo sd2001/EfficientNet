@@ -26,12 +26,14 @@ In particular, the Efficient Net-B6-Wide achieves state-of-the-art 91.12% top-1 
 The empirical research on EfficientNets shows that it is critical to balance all dimensions of network width/ depth/ resolution, and surprisingly such balance can be achieved by simply scaling each of them with constant ratio.
 <br><br>
 <div align="center">
-<b>How does Compound Scaling work and is different from old paradigms.<b>
+  
+**How does Compound Scaling work and is different from old paradigms**
   
 ![image](https://github.com/sd2001/EfficientNet-Rescon/blob/main/imgs/compound.png)  
 
 </div>
-<br><br>
+<br>
+
 - Scaling up any dimension of network width, depth, or resolution improves accuracy, but the accuracy gain diminishes for bigger models.
 - In order to pursue better accuracy and efficiency, it is critical to balance all dimensions of network width, depth, and resolution during ConvNet scaling.
 Intuitively, the compound scaling method makes sense because if the input image is bigger, then the network needs more layers to increase the receptive field and more channels to capture more fine-grained patterns on the bigger image
@@ -40,7 +42,9 @@ Intuitively, the compound scaling method makes sense because if the input image 
 **How Efficient net performs when compared to past transfer learning models.**
  <br>
 <div align="center">
+  
 ![image](https://github.com/sd2001/EfficientNet-Rescon/blob/main/imgs/comparison.png)
+
 </div>
 Earlier GPipes were provided State of Art Results on ImageNet, but are computationally the most expensive. Currently EfficientNets are by far the best with Efficientnet-B6 wide and EfficientNet L2 ticking top accuracies of 91.12% and 91.02% respectively.
 
@@ -85,4 +89,8 @@ python architecture.py
 ```
 jupyter notebook
 ```
+
+<div align="center">
+  ......................................
+  </div>
 
