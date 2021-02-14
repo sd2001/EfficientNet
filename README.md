@@ -26,9 +26,10 @@ In particular, the Efficient Net-B6-Wide achieves state-of-the-art 91.12% top-1 
 The empirical research on EfficientNets shows that it is critical to balance all dimensions of network width/ depth/ resolution, and surprisingly such balance can be achieved by simply scaling each of them with constant ratio.
 <br><br>
 <div align="center">
-<b>How does Compound Scaling work and is different from old paradigms.<br>
+<b>How does Compound Scaling work and is different from old paradigms.<b>
   
 ![image](https://github.com/sd2001/EfficientNet-Rescon/blob/main/imgs/compound.png)  
+
 </div>
 <br><br>
 - Scaling up any dimension of network width, depth, or resolution improves accuracy, but the accuracy gain diminishes for bigger models.
@@ -36,7 +37,8 @@ The empirical research on EfficientNets shows that it is critical to balance all
 Intuitively, the compound scaling method makes sense because if the input image is bigger, then the network needs more layers to increase the receptive field and more channels to capture more fine-grained patterns on the bigger image
 
 
-<b>How Efficient net performs when compared to past transfer learning models.<br>Currently are by far the EfficientNets 
+**How Efficient net performs when compared to past transfer learning models.**
+ <br>
 <div align="center">
 ![image](https://github.com/sd2001/EfficientNet-Rescon/blob/main/imgs/comparison.png)
 </div>
