@@ -1,0 +1,5 @@
+numpy==1.19.4
+tensorboard==2.4.1
+tensorflow==2.4.1
+tensorflow-estimator==2.4.0
+scikit-image==0.17.2
