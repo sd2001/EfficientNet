@@ -25,9 +25,10 @@ In particular, the Efficient Net-B6-Wide achieves state-of-the-art 91.12% top-1 
 <h2>Inference</h2>
 The empirical research on EfficientNets shows that it is critical to balance all dimensions of network width/ depth/ resolution, and surprisingly such balance can be achieved by simply scaling each of them with constant ratio.
 <br><br>
-<div align="center">
-  
+
 **How does Compound Scaling work and is different from old paradigms**
+
+<div align="center">
   
 ![image](https://github.com/sd2001/EfficientNet-Rescon/blob/main/imgs/compound.png)  
 
